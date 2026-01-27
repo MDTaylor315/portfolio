@@ -108,7 +108,7 @@ export default function Footer() {
                         <div className="flex flex-col items-center gap-4 mb-12">
                             <div className="flex flex-wrap items-center justify-center gap-4">
                                 <CrystalButton
-                                    icon="/icons/LinkedIn.svg"
+                                    icon="/icons/linkedin.svg"
                                     href="https://www.linkedin.com/in/eduardo-velarde-1b93902b2/"
                                     className="w-14 h-14 p-3"
                                 />
@@ -118,7 +118,7 @@ export default function Footer() {
                                     className="w-14 h-14 p-3"
                                 />
                                 <CrystalButton
-                                    icon="/icons/Email.svg"
+                                    icon="/icons/email.svg"
                                     onClick={handleEmailClick}
                                     className="w-14 h-14 p-3"
                                 />
