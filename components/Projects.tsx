@@ -20,7 +20,7 @@ export default function Projects() {
     const t = translations[language];
 
     const AdipixPath: string = '/img/AdiPix/Adipix-';
-    const SystMapPath: string = '/img/SystMap/Systmap-';
+    const SystMapPath: string = '/img/SystMap/SystMap-';
     const BediaPath: string = '/img/Bedia/Bedia-';
 
     const projects: Project[] = t.projects.list.map((project, index) => {

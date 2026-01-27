@@ -10,7 +10,7 @@ import { translations } from '@/translations/translations';
 export default function Hero() {
     const { language } = useLanguage();
     const t = translations[language];
-    const cvUrl = language === 'ES' ? '/CV-ESP.pdf' : '/CV-ENG.pdf';
+    const cvUrl = language === 'ES' ? '/CV-ESP-1.pdf' : '/CV-ENG-1.pdf';
 
     return (
         <section className="relative w-full bg-white flex flex-col items-center z-0">
