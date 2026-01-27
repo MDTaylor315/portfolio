@@ -1,20 +1,59 @@
 // components/Navbar.tsx
 'use client';
 
+import { useState, useEffect } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { translations } from '@/translations/translations';
 
 export default function Navbar() {
     const { language } = useLanguage();
     const t = translations[language];
+    const [activeSection, setActiveSection] = useState('inicio');
 
     const navItems = [
-        { name: t.navbar.inicio, active: true },
-        { name: t.navbar.sobreMi, active: false },
-        { name: t.navbar.experiencia, active: false },
-        { name: t.navbar.proyectos, active: false },
-        { name: t.navbar.contacto, active: false },
+        { name: t.navbar.inicio, id: 'inicio' },
+        { name: t.navbar.sobreMi, id: 'sobre-mi' },
+        { name: t.navbar.experiencia, id: 'experiencia' },
+        { name: t.navbar.proyectos, id: 'proyectos' },
+        { name: t.navbar.contacto, id: 'contacto' },
     ];
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const sections = navItems.map(item => item.id);
+            const scrollPosition = window.scrollY + 200; // offset para activar antes
+
+            for (let i = sections.length - 1; i >= 0; i--) {
+                const section = document.getElementById(sections[i]);
+                if (section && section.offsetTop <= scrollPosition) {
+                    setActiveSection(sections[i]);
+                    break;
+                }
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        handleScroll(); // ejecutar al montar
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+        e.preventDefault();
+        const element = document.getElementById(id);
+        if (element) {
+            let offsetTop = element.offsetTop;
+            
+            // Ajuste especial: si no es "inicio", restar espacio para el navbar
+            if (id !== 'inicio') {
+                offsetTop -= 100; // Offset para compensar el navbar y spacing
+            }
+            
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    };
 
     return (
 
@@ -65,11 +104,13 @@ export default function Navbar() {
                     {navItems.map((item) => (
                         <a
                             key={item.name}
-                            href={`#${item.name.toLowerCase().replace(' ', '-')}`}
-                            className={`relative z-10 font-poppins font-normal text-[14px] xl:text-[16px] tracking-tight transition-all duration-300 whitespace-nowrap ${item.active
-                                ? 'text-white'
-                                : 'text-[#949494] hover:text-white/80'
-                                }`}
+                            href={`#${item.id}`}
+                            onClick={(e) => handleClick(e, item.id)}
+                            className={`relative z-10 font-poppins font-normal text-[14px] xl:text-[16px] tracking-tight transition-all duration-300 whitespace-nowrap cursor-pointer ${
+                                activeSection === item.id
+                                    ? 'text-white'
+                                    : 'text-[#949494] hover:text-white/80'
+                            }`}
                         >
                             {item.name}
                         </a>

@@ -11,25 +11,32 @@ export default function Home() {
   return (
     <main className="relative overflow-x-hidden">
       <Navbar />
-      <Hero />
+      <section id="inicio">
+        <Hero />
+      </section>
       {/* Sección blanca para AboutMe y Experience */}
-      <section className="bg-[#F0EEF8] relative z-0 pt-20">
+      <section id="sobre-mi" className="bg-[#F0EEF8] relative z-0 pt-20">
         <AboutMe />
-        {/* Sección de Experiencia - Directamente después de AboutMe */}
+      </section>
+      
+      {/* Sección de Experiencia - Directamente después de AboutMe */}
+      <section id="experiencia" className="bg-[#F0EEF8] relative z-0">
         <Experience />
       </section>
 
       {/* Contenedor blanco para Projects y FromIdeasToReality */}
-      <div className="bg-[#F0EEF8]" >
+      <section id="proyectos" className="bg-[#F0EEF8]">
         {/* Sección de Proyectos */}
         <Projects />
 
         {/* FromIdeasToReality */}
         <FromIdeasToReality />
-      </div>
+      </section>
 
       {/* Footer con su propio fondo */}
-      <Footer />
+      <section id="contacto">
+        <Footer />
+      </section>
     </main>
   );
 }
