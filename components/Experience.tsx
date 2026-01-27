@@ -1,8 +1,10 @@
 'use client';
 
 import Image from 'next/image';
+import { useState, useEffect } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { translations } from '@/translations/translations';
+import LoadingDots from './LoadingDots';
 
 interface ExperienceItem {
     company: string;
@@ -14,11 +16,24 @@ export default function Experience() {
     const { language } = useLanguage();
     const t = translations[language];
     const experiences = t.experience.experiences;
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        setIsLoading(false);
+    }, [language]);
+
+    if (isLoading) {
+        return (
+            <section className="w-full bg-[#F0EEF8] pt-12 lg:pt-16 pb-8 lg:pb-12 overflow-hidden flex items-center justify-center">
+                <LoadingDots />
+            </section>
+        );
+    }
 
     return (
         <section className="w-full bg-[#F0EEF8] pt-12 lg:pt-16 pb-8 lg:pb-12 overflow-hidden flex items-center justify-center">
             {/* CONTENEDOR PRINCIPAL CENTRADO - Mismo padding que AboutMe */}
-            <div className="container mx-auto px-6 lg:px-16 xl:px-24 flex flex-col items-center justify-center">
+            <div className="container mx-auto px-6 lg:px-8 flex flex-col items-center justify-center">
 
                 {/* TÍTULO */}
                 <div className="w-full max-w-7xl mb-8 lg:mb-12">

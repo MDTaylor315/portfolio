@@ -1,19 +1,34 @@
 'use client';
 
 import Image from 'next/image';
+import { useState, useEffect } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { translations } from '@/translations/translations';
+import LoadingDots from './LoadingDots';
 
 export default function AboutMe() {
     const { language } = useLanguage();
     const t = translations[language];
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        setIsLoading(false);
+    }, [language]);
+
+    if (isLoading) {
+        return (
+            <section className="w-full bg-[#F0EEF8] py-10 lg:py-20 overflow-hidden flex items-center justify-center">
+                <LoadingDots />
+            </section>
+        );
+    }
 
     return (
         <section className="w-full bg-[#F0EEF8] py-10 lg:py-20 overflow-hidden flex items-center justify-center">
-            <div className="container mx-auto px-6 lg:px-16 xl:px-24 flex flex-col items-center justify-center">
+            <div className="container mx-auto px-6 lg:px-8 flex flex-col items-center justify-center">
 
                 {/* Contenedor Flex para Texto e Imagen */}
-                <div className="flex flex-col lg:flex-row items-center justify-between w-full mb-12">
+                <div className="flex flex-col lg:flex-row items-center justify-between w-full max-w-7xl mb-12">
 
                     {/* LADO IZQUIERDO: TEXTO */}
                     <div className="w-full lg:w-[55%] flex flex-col items-center lg:items-start text-center lg:text-left">

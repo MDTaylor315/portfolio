@@ -5,6 +5,7 @@ import { CrystalButton } from './CrystalButton';
 import { useState, useEffect } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { translations } from '@/translations/translations';
+import LoadingDots from './LoadingDots';
 
 interface Project {
     title: string;
@@ -18,6 +19,12 @@ interface Project {
 export default function Projects() {
     const { language } = useLanguage();
     const t = translations[language];
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        // Simular carga de contenido
+        setIsLoading(false);
+    }, [language]);
 
     const AdipixPath: string = '/img/AdiPix/Adipix-';
     const SystMapPath: string = '/img/SystMap/SystMap-';
@@ -77,11 +84,15 @@ export default function Projects() {
                 </div>
 
                 {/* PROYECTOS */}
-                <div className="w-full max-w-7xl mx-auto space-y-16 lg:space-y-24">
-                    {projects.map((project, index) => (
-                        <ProjectSlider key={index} project={project} />
-                    ))}
-                </div>
+                {isLoading ? (
+                    <LoadingDots />
+                ) : (
+                    <div className="w-full max-w-7xl mx-auto space-y-16 lg:space-y-24">
+                        {projects.map((project, index) => (
+                            <ProjectSlider key={index} project={project} />
+                        ))}
+                    </div>
+                )}
             </div>
         </section>
     );

@@ -1,12 +1,27 @@
 'use client';
 
 import Image from 'next/image';
+import { useState, useEffect } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { translations } from '@/translations/translations';
+import LoadingDots from './LoadingDots';
 
 export default function FromIdeasToReality() {
     const { language } = useLanguage();
     const t = translations[language];
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        setIsLoading(false);
+    }, [language]);
+
+    if (isLoading) {
+        return (
+            <section className="w-full bg-[#F0EEF8] py-16 lg:py-24 relative rounded-t-[80px] lg:rounded-t-[120px] overflow-hidden">
+                <LoadingDots />
+            </section>
+        );
+    }
 
     return (
         <section className="w-full bg-[#F0EEF8] py-16 lg:py-24 relative rounded-t-[80px] lg:rounded-t-[120px] overflow-hidden">
