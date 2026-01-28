@@ -18,7 +18,7 @@ export default function Home() {
       <section id="sobre-mi" className="bg-[#F0EEF8] relative z-0 pt-20">
         <AboutMe />
       </section>
-      
+
       {/* Sección de Experiencia - Directamente después de AboutMe */}
       <section id="experiencia" className="bg-[#F0EEF8] relative z-0">
         <Experience />

@@ -42,12 +42,12 @@ export default function Navbar() {
         const element = document.getElementById(id);
         if (element) {
             let offsetTop = element.offsetTop;
-            
+
             // Ajuste especial: si no es "inicio", restar espacio para el navbar
             if (id !== 'inicio') {
                 offsetTop -= 100; // Offset para compensar el navbar y spacing
             }
-            
+
             window.scrollTo({
                 top: offsetTop,
                 behavior: 'smooth'
@@ -106,11 +106,10 @@ export default function Navbar() {
                             key={item.name}
                             href={`#${item.id}`}
                             onClick={(e) => handleClick(e, item.id)}
-                            className={`relative z-10 font-poppins font-normal text-[14px] xl:text-[16px] tracking-tight transition-all duration-300 whitespace-nowrap cursor-pointer ${
-                                activeSection === item.id
+                            className={`relative z-10 font-poppins font-normal text-[14px] xl:text-[16px] tracking-tight transition-all duration-300 whitespace-nowrap cursor-pointer ${activeSection === item.id
                                     ? 'text-white'
                                     : 'text-[#949494] hover:text-white/80'
-                            }`}
+                                }`}
                         >
                             {item.name}
                         </a>
