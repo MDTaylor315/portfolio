@@ -34,17 +34,30 @@ export const translations = {
       title: "Mi Experiencia",
       experiences: [
         {
+          company: "Transportes Montano",
+          period: "Abril 2026 - Presente",
+          description:
+            "Diseñé desde cero la arquitectura móvil (Clean Architecture + Riverpod) para el control integral de rutas, recojo y entrega de pedidos integrado con ERP vía JSON-RPC. Desarrollé el flujo operativo de manifiestos y despachos con autocompletado inteligente (SUNAT / OCR), además de un motor offline-first con sincronización en segundo plano (Isolates), digitalización masiva de guías y recuperación automática ante cierres por memoria (OOM).",
+        },
+        {
+          company: "Techbot",
+          period: "Abril 2026 - Presente",
+          description:
+            "Lideré el desarrollo de aplicaciones móviles de punto de venta (POS autoservicio y terminales para mozos) con soporte offline-first basado en SQLite (17 migraciones de esquema) y Riverpod. Integré periféricos de hardware (escáneres, impresión fiscal térmica y middleware de pagos), además de resolver estados complejos de stock concurrente y sincronización idempotente con backends multi-tenant.",
+        },
+        {
+          company: "Sistematic",
+          period: "Septiembre 2025 - Febrero 2026",
+          description:
+            "Me uní al equipo para que la empresa pueda ampliarse al desarrollo móvil. Hice de inicio a fin una aplicación de puntos y premios, manejando toda la lógica técnica y la privacidad con códigos de unión. Actualmente desarrollo una app logística que le da un plus a su sistema web actual, permitiendo rastrear los viajes en vivo y registrar entregas con mucho más detalle. Trabajo con el equipo de requerimientos para llevar las necesidades del cliente a la aplicación.",
+        },
+        {
           company: "Simbiosys",
           period: "Marzo 2024 - Junio 2025",
           description:
             "Me encargué de mejorar la experiencia de usuario arreglando bugs visuales y de lógica, incluso aquellos detectados por reportes automáticos de excepciones. Implementé mejoras en los módulos de GPS, documentos y aprobación de solicitudes. Desarrollé por completo un módulo para supervisores que permitía asignar centros de costo y horarios, incluyendo un calendario para el monitoreo histórico de la asistencia",
         },
-        {
-          company: "Sistematic",
-          period: "Septiembre 2025 - Actualidad",
-          description:
-            "Me uní al equipo para que la empresa pueda ampliarse al desarrollo móvil. Hice de inicio a fin una aplicación de puntos y premios, manejando toda la lógica técnica y la privacidad con códigos de unión. Actualmente desarrollo una app logística que le da un plus a su sistema web actual, permitiendo rastrear los viajes en vivo y registrar entregas con mucho más detalle. Trabajo con el equipo de requerimientos para llevar las necesidades del cliente a la aplicación.",
-        },
+        
       ],
     },
 
@@ -146,16 +159,28 @@ export const translations = {
       title: "My Experience",
       experiences: [
         {
-          company: "Simbiosys",
-          period: "March 2024 - June 2025",
+          company: "Transportes Montano",
+          period: "April 2026 - Present",
           description:
-            "I was responsible for improving the user experience by fixing visual and logic bugs, including those detected by automatic exception reports. I implemented improvements in GPS modules, documents, and request approvals. I fully developed a supervisor module that allowed assigning cost centers and schedules, including a calendar for historical attendance monitoring.",
+            "Architected the end-to-end mobile platform (Clean Architecture + Riverpod) for route logistics, order pickup, and delivery tracking integrated with ERP via JSON-RPC. Built the dispatch and manifest lifecycle featuring automated order auto-fill (tax authority API / OCR pipeline), alongside an offline-first background sync engine (Isolates), batch document scanning, and Out-Of-Memory (OOM) recovery mechanisms.",
+        }, 
+        {
+          company: "Techbot",
+          period: "April 2026 - Present",
+          description:
+            "Led the development of production point-of-sale mobile apps (self-service kiosks and waiter terminals) featuring an offline-first architecture with SQLite (17 schema migrations) and Riverpod. Integrated specialized hardware peripherals (barcode/QR scanners, thermal fiscal printing, and local payment middleware) while managing concurrent stock reservations with multi-tenant backends.",
         },
         {
           company: "Sistematic",
           period: "September 2025 - Present",
           description:
             "I joined the team to enable the company to expand into mobile development. I built from scratch a points and rewards application, handling all technical logic and privacy with join codes. Currently, I am developing a logistics app that enhances their existing web system, allowing real-time trip tracking and more detailed delivery registration. I work with the requirements team to translate client needs into the application.",
+        },
+         {
+          company: "Simbiosys",
+          period: "March 2024 - June 2025",
+          description:
+            "I was responsible for improving the user experience by fixing visual and logic bugs, including those detected by automatic exception reports. I implemented improvements in GPS modules, documents, and request approvals. I fully developed a supervisor module that allowed assigning cost centers and schedules, including a calendar for historical attendance monitoring.",
         },
       ],
     },
