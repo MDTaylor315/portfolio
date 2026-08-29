@@ -46,7 +46,7 @@ export default function Skills() {
     const t = translations[language].skills;
 
     return (
-        <section className="w-full bg-[#F0EEF8] px-6 pb-12 pt-2 lg:px-8 lg:pb-16 lg:pt-4">
+        <section id="skills" className="w-full bg-[#F0EEF8] px-6 pb-12 pt-2 lg:px-8 lg:pb-16 lg:pt-4">
             <div className="container mx-auto max-w-7xl rounded-[28px] border border-[#DED9E8] bg-[#F8F7FC] p-5 shadow-[0_3px_12px_rgba(22,27,30,0.08)] lg:p-8">
                 <h2 className="mb-8 font-russo text-[24px] uppercase leading-tight text-[#161B1E] lg:text-[32px]">{t.title}</h2>
 

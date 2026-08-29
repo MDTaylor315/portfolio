@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import Background from './Background';
 import { CrystalButton } from './CrystalButton';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { translations } from '@/translations/translations';
@@ -14,62 +13,29 @@ export default function Hero() {
     const cvUrl = language === 'ES' ? '/CV-ESP.pdf' : '/CV-ENG.pdf';
 
     return (
-        <section className="relative w-full bg-white flex flex-col items-center z-0">
-            {/* HERO - bg-[#030303] */}
-            {/* Añadimos z-0 para que quede por debajo de lo que venga después */}
-            <div className="relative w-full bg-[#030303] rounded-b-[100px] lg:rounded-b-[150px] overflow-visible shadow-2xl z-0">
-                <Background />
+        <section className="relative z-0 flex w-full flex-col items-center bg-[#F0EEF8]">
+            <div className="relative h-[620px] w-full overflow-hidden sm:h-auto sm:aspect-[3/2]">
+                <Image
+                    src="/img/Hero-Composition.png"
+                    alt=""
+                    fill
+                    className="object-cover object-center sm:object-fill"
+                    priority
+                    sizes="100vw"
+                />
 
-                <div className="relative z-10 flex flex-col items-center">
-                    {/* TÍTULO */}
-                    <div className="mt-[15vh] text-center select-none pointer-events-none px-4">
-                        <h1 className="font-russo text-[50px] sm:text-[60px] lg:text-[100px] leading-[1.05] text-[#F0EEF866] uppercase tracking-[0.01em]">
-                            <span className="block">{titleFirstLine}</span>
-                            <span className="block text-[0.7em]">{titleSecondLine}</span>
-                        </h1>
-                    </div>
+                <div className="pointer-events-none absolute inset-x-0 top-[16%] z-10 select-none px-4 text-center sm:top-[13%]">
+                    <h1 className="font-russo text-[42px] leading-[1.05] text-[#F0EEF866] uppercase tracking-[0.01em] sm:text-[60px] lg:text-[100px]">
+                        <span className="block">{titleFirstLine}</span>
+                        <span className="block text-[0.7em]">{titleSecondLine}</span>
+                    </h1>
+                </div>
 
-                    {/* COMPOSICIÓN VISUAL */}
-                    <div className="relative w-full max-w-[1700px] flex justify-center items-end h-[500px] -mt-20 lg:-mt-32">
-
-                        {/* Celular Izquierdo - Más pequeño y más abajo */}
-                        <div className="absolute left-4 lg:left-50 bottom-[-150px] rotate-[-10deg] drop-shadow-[0_60px_120px_rgba(0,0,0,0.95)] z-20">
-                            <Image
-                                src="/img/AdiPix/Adipix-1.png"
-                                alt="AdiPix"
-                                width={260}
-                                height={536}
-                                className="opacity-90"
-                                priority
-                            />
-                        </div>
-
-                        {/* AVATAR */}
-                        <div className="relative w-[500px] h-[504px] z-30 translate-y-10">
-                            <Image src="/img/Avatar-Hero1.png" alt="Avatar" fill className="object-contain" priority />
-                        </div>
-
-                        {/* Celular Derecho - Más pequeño y más abajo */}
-                        <div className="absolute right-4 lg:right-50 bottom-[-150px] rotate-[10deg] drop-shadow-[0_60px_120px_rgba(0,0,0,0.95)] z-20">
-                            <Image
-                                src="/img/Bedia/Bedia-1.png"
-                                alt="Bedia"
-                                width={260}
-                                height={536}
-                                className="opacity-90"
-                                priority
-                            />
-                        </div>
-
-                        {/* BOTONES */}
-                        <div className="absolute bottom-16 z-50 flex gap-4">
-                            <CrystalButton href="https://www.linkedin.com/in/eduardo-velarde-1b93902b2/" icon="/icons/linkedin.svg" className="w-14 h-14" />
-                            <CrystalButton href={cvUrl} className="px-8 py-3.5">{t.hero.cvButton}</CrystalButton>
-                        </div>
-                    </div>
+                <div className="absolute bottom-[8%] left-1/2 z-20 flex -translate-x-1/2 gap-4 sm:bottom-[9%]">
+                    <CrystalButton href="https://www.linkedin.com/in/eduardo-velarde-1b93902b2/" icon="/icons/linkedin.svg" className="w-14 h-14" />
+                    <CrystalButton href={cvUrl} className="px-8 py-3.5">{t.hero.cvButton}</CrystalButton>
                 </div>
             </div>
-            {/* Eliminamos el div de espaciado h-20 para que la sección blanca suba */}
         </section>
     );
 }

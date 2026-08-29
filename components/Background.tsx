@@ -2,12 +2,22 @@
 export default function Background() {
   return (
     /* El Background ahora no necesita rounded-b porque el clip-path del Hero lo recorta */
-    <div className="absolute inset-0 z-0 overflow-hidden bg-black w-full h-full">
+    <div
+      className="absolute inset-0 z-0 h-full w-full overflow-hidden bg-black drop-shadow-2xl"
+      style={{
+        WebkitMaskImage: "url('/img/Background-Hero.png')",
+        maskImage: "url('/img/Background-Hero.png')",
+        WebkitMaskSize: '100% 100%',
+        maskSize: '100% 100%',
+        WebkitMaskRepeat: 'no-repeat',
+        maskRepeat: 'no-repeat',
+      }}
+    >
 
       {/* 1. Imagen de Granulado */}
       <div
-        className="absolute inset-0 bg-[url('/img/Background-Hero.png')] bg-cover bg-center opacity-90"
-        style={{ backgroundSize: '100% auto' }}
+        className="absolute inset-0 bg-[url('/img/Background-Hero.png')] bg-center opacity-90"
+        style={{ backgroundSize: '100% 100%', backgroundRepeat: 'no-repeat' }}
       ></div>
 
       {/* 2. Cuadrícula Cuadrada Fija */}
