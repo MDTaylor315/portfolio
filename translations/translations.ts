@@ -4,7 +4,7 @@ export const translations = {
   ES: {
     // HERO
     hero: {
-      title: "DESARROLLADOR\nMÓVIL FLUTTER",
+      title: "DESARROLLADOR\nMÓVIL & FULL STACK",
       cvButton: "Ver CV",
     },
 
@@ -21,10 +21,10 @@ export const translations = {
     aboutMe: {
       greeting: "Hola, yo soy",
       name: "Eduardo Velarde",
-      role: "Desarrollador Móvil Flutter",
-      specialty: "Especialista en Flutter y Arquitectura Limpia.",
+      role: "MOBILE & FULL STACK DEVELOPER",
+      specialty: "Especialista en Flutter, Laravel y Arquitectura Limpia.",
       description1:
-        "Con base en Android y experiencia en iOS, manejo el ciclo completo de desarrollo: desde la integración de APIs hasta el despliegue final. Me enfoco en crear componentes reutilizables que aseguren la escalabilidad.",
+        "Con experiencia sólida en ecosistemas móviles (Android e iOS) y desarrollo web/backend (Laravel, React, PostgreSQL), manejo el ciclo completo de software: desde el diseño y consumo de APIs REST hasta el despliegue final. Me enfoco en construir sistemas modulares, sincronización offline-first y arquitecturas escalables de alto rendimiento.",
       description2:
         "Bilingüe (Inglés avanzado), de aprendizaje ágil y comprometido con la entrega de software técnico de alta calidad.",
     },
@@ -59,6 +59,22 @@ export const translations = {
         },
         
       ],
+    },
+
+    // SKILLS
+    skills: {
+      title: "Mis Skills",
+      mainStack: "Stack principal",
+      otherTechnologies: "Otras tecnologías & herramientas",
+      mobile: "Mobile",
+      frontend: "Frontend Web",
+      backendDatabase: "Backend & Database",
+      mobileWeb: "Mobile & Web",
+      backend: "Backend",
+      databasesCloud: "Bases de Datos & Cloud",
+      deployTools: "Deploy & Tools",
+      evolving: "En constante evolución",
+      evolvingDescription: "Siempre aprendiendo, construyendo y mejorando cada día.",
     },
 
     // PROJECTS
@@ -129,7 +145,7 @@ export const translations = {
   EN: {
     // HERO
     hero: {
-      title: "MOBILE FLUTTER\nDEVELOPER",
+      title: "MOBILE & FULL STACK\nDEVELOPER",
       cvButton: "View CV",
     },
 
@@ -146,10 +162,10 @@ export const translations = {
     aboutMe: {
       greeting: "Hello, I am",
       name: "Eduardo Velarde",
-      role: "Flutter Mobile Developer",
-      specialty: "Specialist in Flutter and Clean Architecture.",
+      role: "MOBILE & FULL STACK DEVELOPER",
+      specialty: "Specialist in Flutter, Laravel, and Clean Architecture.",
       description1:
-        "With a foundation in Android and experience in iOS, I handle the full development cycle: from API integration to final deployment. I focus on creating reusable components that ensure scalability.",
+        "With solid experience across mobile ecosystems (Android and iOS) and web/backend development (Laravel, React, PostgreSQL), I handle the entire software lifecycle: from RESTful API design and consumption to final deployment. I focus on building modular systems, offline-first synchronization, and high-performance, scalable architectures.",
       description2:
         "Bilingual (Advanced English), quick learner, and committed to delivering high-quality technical software.",
     },
@@ -183,6 +199,22 @@ export const translations = {
             "I was responsible for improving the user experience by fixing visual and logic bugs, including those detected by automatic exception reports. I implemented improvements in GPS modules, documents, and request approvals. I fully developed a supervisor module that allowed assigning cost centers and schedules, including a calendar for historical attendance monitoring.",
         },
       ],
+    },
+
+    // SKILLS
+    skills: {
+      title: "My Skills",
+      mainStack: "Main stack",
+      otherTechnologies: "Other technologies & tools",
+      mobile: "Mobile",
+      frontend: "Frontend Web",
+      backendDatabase: "Backend & Database",
+      mobileWeb: "Mobile & Web",
+      backend: "Backend",
+      databasesCloud: "Databases & Cloud",
+      deployTools: "Deploy & Tools",
+      evolving: "Constantly evolving",
+      evolvingDescription: "Always learning, building, and improving every day.",
     },
 
     // PROJECTS

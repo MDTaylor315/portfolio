@@ -3,6 +3,7 @@ import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import AboutMe from '@/components/AboutMe';
 import Experience from '@/components/Experience';
+import Skills from '@/components/Skills';
 import Projects from '@/components/Projects';
 import FromIdeasToReality from '@/components/FromIdeasToReality';
 import Footer from '@/components/Footer';
@@ -23,6 +24,8 @@ export default function Home() {
       <section id="experiencia" className="bg-[#F0EEF8] relative z-0">
         <Experience />
       </section>
+
+      <Skills />
 
       {/* Contenedor blanco para Projects y FromIdeasToReality */}
       <section id="proyectos" className="bg-[#F0EEF8]">

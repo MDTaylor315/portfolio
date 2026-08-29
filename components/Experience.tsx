@@ -24,14 +24,14 @@ export default function Experience() {
 
     if (isLoading) {
         return (
-            <section className="w-full bg-[#F0EEF8] pt-12 lg:pt-16 pb-8 lg:pb-12 overflow-hidden flex items-center justify-center">
+            <section className="w-full bg-[#F0EEF8] pt-12 pb-2 lg:pt-16 lg:pb-4 overflow-hidden flex items-center justify-center">
                 <LoadingDots />
             </section>
         );
     }
 
     return (
-        <section className="w-full bg-[#F0EEF8] pt-12 lg:pt-16 pb-8 lg:pb-12 overflow-hidden flex items-center justify-center">
+        <section className="w-full bg-[#F0EEF8] pt-12 pb-2 lg:pt-16 lg:pb-4 overflow-hidden flex items-center justify-center">
             {/* CONTENEDOR PRINCIPAL CENTRADO - Mismo padding que AboutMe */}
             <div className="container mx-auto px-6 lg:px-8 flex flex-col items-center justify-center">
 
@@ -45,7 +45,7 @@ export default function Experience() {
                 {/* CONTENEDOR DE EXPERIENCIAS - USANDO GRID */}
                 <div className="w-full max-w-7xl">
                     {experiences.map((exp, index) => (
-                        <div key={index} className="grid grid-cols-1 lg:grid-cols-[20%_80px_1fr] gap-6 lg:gap-x-0 relative pb-16 lg:pb-20">
+                        <div key={index} className={`grid grid-cols-1 lg:grid-cols-[20%_80px_1fr] gap-6 lg:gap-x-0 relative ${index === experiences.length - 1 ? 'pb-4 lg:pb-6' : 'pb-16 lg:pb-20'}`}>
 
                             {/* COLUMNA 1: Empresa y Período */}
                             <div className="flex flex-col items-start">

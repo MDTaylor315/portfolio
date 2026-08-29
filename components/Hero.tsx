@@ -10,6 +10,7 @@ import { translations } from '@/translations/translations';
 export default function Hero() {
     const { language } = useLanguage();
     const t = translations[language];
+    const [titleFirstLine, titleSecondLine] = t.hero.title.split('\n');
     const cvUrl = language === 'ES' ? '/CV-ESP.pdf' : '/CV-ENG.pdf';
 
     return (
@@ -22,8 +23,9 @@ export default function Hero() {
                 <div className="relative z-10 flex flex-col items-center">
                     {/* TÍTULO */}
                     <div className="mt-[15vh] text-center select-none pointer-events-none px-4">
-                        <h1 className="font-russo text-[50px] sm:text-[60px] lg:text-[100px] leading-[1.05] text-[#F0EEF866] uppercase tracking-[0.01em] whitespace-pre-line">
-                            {t.hero.title}
+                        <h1 className="font-russo text-[50px] sm:text-[60px] lg:text-[100px] leading-[1.05] text-[#F0EEF866] uppercase tracking-[0.01em]">
+                            <span className="block">{titleFirstLine}</span>
+                            <span className="block text-[0.7em]">{titleSecondLine}</span>
                         </h1>
                     </div>
 
