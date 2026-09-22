@@ -25,10 +25,18 @@ export default function Hero() {
                 <div className="relative aspect-video w-full overflow-hidden lg:aspect-[11/5]">
                     {/* Fondo visible completo */}
                     <Image
-                        src="/img/Hero-Background-1.png"
+                        src="/img/Hero-Background-1.webp"
                         alt=""
                         fill
                         className="scale-x-[1.03] object-cover object-bottom"
+                        priority
+                        sizes="100vw"
+                    />
+                    <Image
+                        src="/img/Hero-Background-Pattern.webp"
+                        alt=""
+                        fill
+                        className="pointer-events-none z-10 scale-x-[1.03] object-cover object-bottom"
                         priority
                         sizes="100vw"
                     />
@@ -36,8 +44,8 @@ export default function Hero() {
                     <div
                         className="absolute inset-0 z-40 flex items-end justify-center overflow-hidden"
                         style={{
-                            WebkitMaskImage: "url('/img/Hero-Background-1.png')",
-                            maskImage: "url('/img/Hero-Background-1.png')",
+                            WebkitMaskImage: "url('/img/Hero-Background-1.webp')",
+                            maskImage: "url('/img/Hero-Background-1.webp')",
                             WebkitMaskSize: 'cover',
                             maskSize: 'cover',
                             WebkitMaskPosition: 'center bottom',
