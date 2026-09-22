@@ -5,8 +5,8 @@ export default function Background() {
     <div
       className="absolute inset-0 z-0 h-full w-full overflow-hidden bg-black drop-shadow-2xl"
       style={{
-        WebkitMaskImage: "url('/img/Background-Hero.webp')",
-        maskImage: "url('/img/Background-Hero.webp')",
+        WebkitMaskImage: "url('/img/Background-Hero.png')",
+        maskImage: "url('/img/Background-Hero.png')",
         WebkitMaskSize: '100% 100%',
         maskSize: '100% 100%',
         WebkitMaskRepeat: 'no-repeat',
@@ -16,7 +16,7 @@ export default function Background() {
 
       {/* 1. Imagen de Granulado */}
       <div
-        className="absolute inset-0 bg-[url('/img/Background-Hero.webp')] bg-center opacity-90"
+        className="absolute inset-0 bg-[url('/img/Background-Hero.png')] bg-center opacity-90"
         style={{ backgroundSize: '100% 100%', backgroundRepeat: 'no-repeat' }}
       ></div>
 

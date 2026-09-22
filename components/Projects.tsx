@@ -34,14 +34,14 @@ export default function Projects() {
         let images: string[] = [];
 
         if (index === 0) {
-            images = [`${AdipixPath}0.webp`, `${AdipixPath}1.webp`, `${AdipixPath}2.webp`, `${AdipixPath}3.webp`, `${AdipixPath}4.webp`, `${AdipixPath}5.webp`, `${AdipixPath}6.webp`, `${AdipixPath}7.webp`, `${AdipixPath}8.webp`];
+            images = [`${AdipixPath}0.png`, `${AdipixPath}1.png`, `${AdipixPath}2.png`, `${AdipixPath}3.png`, `${AdipixPath}4.png`, `${AdipixPath}5.png`, `${AdipixPath}6.png`, `${AdipixPath}7.png`, `${AdipixPath}8.png`];
 
         } else if (index === 1) {
-            images = [`${SystMapPath}0.webp`, `${SystMapPath}1.webp`, `${SystMapPath}2.webp`, `${SystMapPath}3.webp`, `${SystMapPath}4.webp`, `${SystMapPath}5.webp`, `${SystMapPath}6.webp`, `${SystMapPath}7.webp`];
+            images = [`${SystMapPath}0.png`, `${SystMapPath}1.png`, `${SystMapPath}2.png`, `${SystMapPath}3.png`, `${SystMapPath}4.png`, `${SystMapPath}5.png`, `${SystMapPath}6.png`, `${SystMapPath}7.png`];
         } else if (index === 2) {
-            images = [`${BediaPath}0.webp`, `${BediaPath}1.webp`, `${BediaPath}2.webp`, `${BediaPath}3.webp`, `${BediaPath}4.webp`];
+            images = [`${BediaPath}0.png`, `${BediaPath}1.png`, `${BediaPath}2.png`, `${BediaPath}3.png`, `${BediaPath}4.png`];
         } else if (index === 3) {
-            images = ['/img/Planiweb.webp'];
+            images = ['/img/Planiweb.png'];
         }
 
         return {
@@ -56,7 +56,7 @@ export default function Projects() {
             {/* Background con patrón de puntos */}
             <div className="absolute inset-0 z-0 overflow-hidden rounded-t-[80px] lg:rounded-t-[120px] rounded-b-[80px] lg:rounded-b-[120px]">
                 <Image
-                    src="/img/Projects-Background.webp"
+                    src="/img/Projects-Background.png"
                     alt="Background"
                     fill
                     className="object-cover"

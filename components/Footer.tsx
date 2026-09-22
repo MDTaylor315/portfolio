@@ -51,7 +51,7 @@ export default function Footer() {
             {/* Background con imagen */}
             <div className="absolute inset-0 z-0">
                 <Image
-                    src="/img/Footer-Background.webp"
+                    src="/img/Footer-Background.png"
                     alt="Footer Background"
                     fill
                     className="object-cover"
@@ -136,7 +136,7 @@ export default function Footer() {
                 <div className="flex-1 flex items-end justify-center">
                     <div className="relative w-full max-w-[350px] lg:max-w-[400px] xl:max-w-[450px]">
                         <Image
-                            src="/img/Footer-Mobile.webp"
+                            src="/img/Footer-Mobile.png"
                             alt="Mobile App"
                             width={600}
                             height={800}

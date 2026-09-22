@@ -44,7 +44,7 @@ export default function FromIdeasToReality() {
                         <div className="flex justify-center lg:justify-end">
                             <div className="relative w-full max-w-[500px] lg:max-w-[600px]">
                                 <Image
-                                    src="/img/Mockup.webp"
+                                    src="/img/Mockup.png"
                                     alt="Mockup de aplicaciones móviles"
                                     width={600}
                                     height={600}

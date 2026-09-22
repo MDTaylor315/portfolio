@@ -15,7 +15,7 @@ export const LanguageSelector = () => {
             >
                 <div className="relative w-8 h-8 rounded-full overflow-hidden">
                     <Image
-                        src="/img/spanish.webp"
+                        src="/img/spanish.png"
                         alt="ES"
                         fill
                         className="object-cover"
@@ -36,7 +36,7 @@ export const LanguageSelector = () => {
             >
                 <div className="relative w-8 h-8 rounded-full overflow-hidden">
                     <Image
-                        src="/img/english.webp"
+                        src="/img/english.png"
                         alt="EN"
                         fill
                         className="object-cover"
