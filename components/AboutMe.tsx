@@ -72,7 +72,7 @@ export default function AboutMe() {
                     <div className="relative w-full lg:w-[40%] flex justify-center lg:justify-end mt-10 lg:mt-0">
                         <div className="relative z-10 w-full max-w-[500px] lg:max-w-[600px]">
                             <Image
-                                src="/img/About-Me.png"
+                                src="/img/About-Me.webp"
                                 alt="About Me"
                                 width={700}
                                 height={700}

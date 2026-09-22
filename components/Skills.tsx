@@ -62,7 +62,7 @@ export default function Skills() {
 
                     <aside className="relative flex min-h-[230px] flex-col justify-end overflow-hidden rounded-[24px] border-2 border-[#A982DF] bg-[#F8F6FD] p-5">
                         <Image
-                            src="/img/Skills/ide.png"
+                            src="/img/Skills/ide.webp"
                             alt="IDE"
                             width={200}
                             height={134}
