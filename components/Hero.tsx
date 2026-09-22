@@ -16,7 +16,7 @@ export default function Hero() {
         <section className="relative z-0 flex w-full flex-col items-center bg-[#F0EEF8]">
             <div className="relative h-[620px] w-full overflow-hidden sm:h-auto sm:aspect-[3/2]">
                 <Image
-                    src="/img/Hero-Composition.webp"
+                    src="/img/Hero-Composition.png"
                     alt=""
                     fill
                     className="object-cover object-center sm:object-fill"

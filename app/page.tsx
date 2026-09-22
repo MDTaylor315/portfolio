@@ -7,11 +7,14 @@ import Skills from '@/components/Skills';
 import Projects from '@/components/Projects';
 import FromIdeasToReality from '@/components/FromIdeasToReality';
 import Footer from '@/components/Footer';
+import PageLoader from '@/components/PageLoader';
 
 export default function Home() {
   return (
-    <main className="relative overflow-x-hidden">
-      <Navbar />
+    <>
+      <PageLoader />
+      <main className="relative overflow-x-hidden">
+        <Navbar />
       <section id="inicio">
         <Hero />
       </section>
@@ -41,5 +44,6 @@ export default function Home() {
         <Footer />
       </section>
     </main>
+    </>
   );
 }
